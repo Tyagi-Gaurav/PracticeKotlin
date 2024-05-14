@@ -1,1 +1,34 @@
 # PracticeKotlin
+
+- In Kotlin, numbers are objects, and the variable holds a reference to the object, not the object itself
+- `==` calls equals method
+- `===` checks if the two operands belong to the same object
+- `?.` (Safe call) Return null if object is null
+- `?:` (Elvis operator). Just like inline if statement
+- `!!` Throws NPE if object on which its called is null.
+- Generics
+  - Invariant
+    - When there are no `in` or `out` parameters passed, then it can only accepts references of its own type
+  - Covariant
+    - If a generic type is covariant, it means you can use a subtype in place of a supertype 
+    - Using `<out T>`
+    - Ex: Assigning List<Dog> to List<Pet>
+    - Cannot be used in function parameters (As its out)
+    - Cannot be used as types for var
+  - Contravariant
+    - Using supertype in place of subtype
+    - Using `<in T>`
+    - Can be used in function or constructor parameters only.
+    - Cannot be used for returning values.
+    - Cannot be used as types of val or var property
+  - Instead of adding `<in` globally to a class, we can add it locally as well.
+    - This could just be as part of function parameter. 
+    - In this way when parameter is passed, it can only have supertype passed in for that specific function.
+- Lambdas
+  - Using TypeAlias
+    - A type alias can be used to provide alternate names for an existing type
+- Sealed Classes
+  - Be able to have enum like classes but be able to add different behavior to those classes.
+- Object types
+  - When you add an object declaration `(companion object)` to a class, it creates an object that belongs to that class. 
+  - One instance of the object is created per class, and it’s shared by all instances of that class.
